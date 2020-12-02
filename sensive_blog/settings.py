@@ -46,7 +46,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR,],
+        'DIRS': [TEMPLATE_DIR, ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -93,15 +93,15 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATIC_URL = os.getenv('STATIC_URL', '/static/')
+STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"), )
+STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, './static/'),
+    ]
 
-MEDIA_ROOT = os.getenv("MEDIA_ROOT", os.path.join(BASE_DIR, 'media'))
+MEDIA_ROOT = './media/'
 
-STATIC_ROOT = os.getenv("STATIC_ROOT")
-
-MEDIA_URL = os.getenv('MEDIA_URL', '/media/')
+MEDIA_URL = '/media/'
 
 INTERNAL_IPS = [
     '127.0.0.1',
