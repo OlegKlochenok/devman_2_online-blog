@@ -14,8 +14,8 @@ def serialize_post(post):
         "text": post.text,
         "author": post.author.username,
         "comments_amount": Comment.objects.filter(post=post).count(),
-        "image_url": post.image.url if post.image else None,
-        "published_at": post.published_at,
+        "image_url": post.image.url if post.image else 'static/img/banner/blog.png',
+        "published_at": post.published_at.date(),
         "slug": post.slug,
     }
 
@@ -28,7 +28,6 @@ def index(request):
     all_posts = Post.objects.prefetch_related('author')
     popular_posts = all_posts.annotate(likes_count=Count('likes')).order_by('-likes_count')[:3]
     fresh_posts = all_posts.order_by('-published_at')[:5]
-
 
     context = {
         'most_popular_posts': [serialize_post(post) for post in popular_posts],
