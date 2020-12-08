@@ -43,6 +43,7 @@ def post_detail(request, slug):
     """
     post = Post.objects.get(slug=slug)
     comments = Comment.objects.filter(post=post)
+
     serialized_comments = []
     for comment in comments:
         serialized_comments.append({
@@ -56,14 +57,16 @@ def post_detail(request, slug):
         "text": post.text,
         "author": post.author.username,
         "comments": serialized_comments,
+        "comments_amount": Comment.objects.filter(post=post).count(),
         'likes_amount': post.likes.count(),
-        "image_url": post.image.url if post.image else None,
+        "image_url": post.image.url if post.image else 'static/img/banner/blog.png',
         "published_at": post.published_at,
         "slug": post.slug,
     }
 
     context = {
         'post': serialized_post,
+        'serialized_comments': serialized_comments,
     }
     return render(request, 'blog-details.html', context)
 

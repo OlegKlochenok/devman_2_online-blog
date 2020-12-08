@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Sensive Blog - Home</title>
-  <link rel="icon" href="../static/img/favicon.png" type="image/png">
+  <link rel="icon" href="{% static 'img/favicon.png'%}" type="image/png">
 
   <link rel="stylesheet" href="{% static  'styles.min.css'%}">
 </head>
@@ -97,9 +97,9 @@
                       </ul>
                     </div>
                   <div class="details mt-20">
-                    <h3>{{ fresh_post.title }}</h3>
+                      <h3>{{ fresh_post.title }}</h3>
                     <p> {{ fresh_post.text|truncatechars:200 }}</p>
-                    <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
+                    <a class="button" href="post/{{ fresh_post.slug }}">Read More <i class="ti-arrow-right"></i></a>
                   </div>
                 </div>
               {% endfor %}
