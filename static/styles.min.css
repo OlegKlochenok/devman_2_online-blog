@@ -3816,7 +3816,8 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 
 .nav-link {
     display: block;
-    padding: .5rem 1rem
+    padding: .5rem 1rem;
+    color: #3a414e;
 }
 
 .nav-link:focus, .nav-link:hover {
@@ -3846,13 +3847,12 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 }
 
 .nav-tabs .nav-link.disabled {
-    color: #6c757d;
+    color: #3a414e;
     background-color: transparent;
     border-color: transparent
 }
 
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-    color: #495057;
     background-color: #fff;
     border-color: #dee2e6 #dee2e6 #fff
 }
