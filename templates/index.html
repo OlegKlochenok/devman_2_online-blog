@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Sensive Blog - Home
+{% endblock %}
 
 {% block content %}
   <!--================Header Menu Area =================-->
-{% load static %}
   <header class="header_area">
     <div class="main_menu">
       <nav class="navbar navbar-expand-lg navbar-light">
@@ -19,7 +23,7 @@
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav justify-content-center">
               <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="../contact">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right navbar-social">
               <li><a href="#"><i class="ti-facebook"></i></a></li>
@@ -32,7 +36,7 @@
       </nav>
     </div>
   </header>
-  <!--================Header Menu Area =================-->
+  <!--================Header Menu Area end=================-->
   
   <main class="site-main">
     <!--================Hero Banner start =================-->  
