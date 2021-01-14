@@ -90,16 +90,13 @@
                         <li><a href="#"><i class="ti-themify-favicon"></i>{{ fresh_post.comments_amount }} Comments</a></li>
                       </ul>
                     </div>
-                  <div class="details mt-20">
+                    <div class="details mt-20">
                       <h3>{{ fresh_post.title }}</h3>
-                    <p> {{ fresh_post.text|truncatechars:200 }}</p>
-                    <a class="button" href="post/{{ fresh_post.slug }}">Read More <i class="ti-arrow-right"></i></a>
+                      <p> {{ fresh_post.text|truncatechars:200 }}</p>
+                      <a class="button" href="post/{{ fresh_post.slug }}">Read More <i class="ti-arrow-right"></i></a>
+                    </div>
                   </div>
-                </div>
               {% endfor %}
-
-
-            
 
             <div class="row">
               <div class="col-lg-12">
