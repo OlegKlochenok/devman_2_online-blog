@@ -15,7 +15,7 @@
           <h1>Blog details</h1>
           <nav aria-label="breadcrumb" class="banner-breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
               <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
             </ol>
           </nav>
@@ -31,7 +31,7 @@
       <div class="row">
         <div class="col-lg-8">
             <div class="main_blog_details">
-                <img class="img-fluid" src={{ post.image_url }} alt="image">
+                <img class="img-fluid" src={{ post.image_url }} alt="picture">
                 <h4>{{ post.title }}</h4>
                 <div class="user_details">
                   <div class="mt-sm-0 mt-3">
@@ -59,7 +59,7 @@
 
             <div class="comments-area">
                 <h4>{{ post.comments_amount }} Comments</h4>
-                {% for serialized_comment in serialized_comments %}
+                  {% for serialized_comment in serialized_comments %}
                     <div class="comment-list">
                         <div class="single-comment justify-content-between d-flex">
                             <div class="user justify-content-between d-flex">
@@ -76,7 +76,7 @@
                             </div>
                         </div>
                     </div>
-                {% endfor %}
+                  {% endfor %}
             </div>
         </div>
           <!-- Start Blog Post Siddebar -->
